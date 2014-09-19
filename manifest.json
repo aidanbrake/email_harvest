@@ -1,0 +1,22 @@
+{
+   "background":{
+    "scripts": ["js/jquery.min.js", "js/background.js"]
+   },
+   "name": "Email harvest",
+   "description": "It will help you a lot...",
+   "author": "Aidan",
+   "content_scripts": [{
+      "matches": ["http://whois.domaintools.com/*", "https://whois.domaintools.com/*"],
+      "js": ["js/jquery.min.js", "js/urls.js", "js/content_script.js"],
+      "run_at": "document_end",
+      "all_frames": true
+    }],
+   "permissions": [
+      "https://domaintools.com/*",
+      "http://domaintools.com/*"],
+   "version": "1.0.0",
+   "manifest_version": 2,
+   "web_accessible_resources": [
+        "js/jquery.min.js"
+     ]
+}
